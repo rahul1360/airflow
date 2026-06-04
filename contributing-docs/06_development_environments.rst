@@ -34,15 +34,15 @@ Benefits:
 -   Packages are installed locally. No container environment is required.
 -   You can benefit from local debugging within your IDE. You can follow the `Local and remote debugging in IDE <07_local_virtualenv.rst#local-and-remote-debugging-in-ide>`__
     to set up your local virtualenv and connect your IDE with the environment.
--   With the virtualenv in your IDE, you can benefit from auto completion and running tests directly from the IDE.
+-   With the virtualenv in your IDE, you can benefit from autocompletion and running tests directly from the IDE.
 
 Limitations:
 
 -   You have to maintain your dependencies and local environment consistent with
     other development environments that you have on your local machine.
 
--   You cannot run tests that require external components, such as mysql,
-    postgres database, hadoop, mongo, cassandra, redis, etc.
+-   You cannot run tests that require external components, such as MySQL,
+    PostgresSQL database, Hadoop, Mongo, Cassandra, Redis, etc.
 
     The tests in Airflow are a mixture of unit and integration tests and some of
     them require these components to be set up. Local virtualenv supports only
@@ -79,7 +79,7 @@ a Breeze to develop Airflow*".
 Benefits:
 
 -   Breeze is a complete environment that includes external components, such as
-    mysql database, hadoop, mongo, cassandra, redis, etc., required by some of
+    MySQL database, Hadoop, Mongo, Cassandra, Redis, etc., required by some of
     Airflow tests. Breeze provides a pre-configured Docker Compose environment
     where all these services are available and can be used by tests
     automatically.
@@ -144,7 +144,7 @@ The table below summarizes differences between the environments:
 +--------------------------+----------------------------------+---------------------------------------+----------------------------------------+
 | Reproducing CI failures  | - (-) not possible in many cases | - (+) fully reproducible              | (+) reproduce CI failures              |
 +--------------------------+----------------------------------+---------------------------------------+----------------------------------------+
-| Ability to update        | - (-) requires manual updates    | - (+) automated update via breeze cmd | (+/-) can be rebuild on demand         |
+| Ability to update        | - (-) requires manual updates    | - (+) automated update via breeze cmd | (+/-) can be rebuilt on demand         |
 +--------------------------+----------------------------------+---------------------------------------+----------------------------------------+
 | Disk space and CPU usage | - (+) relatively lightweight     | - (-) uses GBs of disk and many CPUs  | (-) integration tests (extra config)   |
 +--------------------------+----------------------------------+---------------------------------------+----------------------------------------+
